@@ -23,6 +23,7 @@ document.addEventListener("click", (event) => {
 function start(id) {
     const tile = document.getElementById(id);
     turn = playerTurn ? PLAYER_X : PLAYER_O;
+    tile.textContent = turn;
     tile.classList.add(turn);
     updateGame(turn);
 }
@@ -49,11 +50,11 @@ function isDraw() {
 
     for(index in TILES) {
         if(!isNaN(index)) {
-            if(TILES[index].classList.contains(JOGADOR_X)) {
+            if(TILES[index].classList.contains(PLAYER_X)) {
                 x++;
             }
     
-            if(TILES[index].classList.contains(JOGADOR_O)) {
+            if(TILES[index].classList.contains(PLAYER_O)) {
                 o++;
             }
         }
