@@ -8,20 +8,47 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
   </head>
   <body>
-    <div class="game">
-      <h1>Jogo da Velha</h1>
-      <div class="grid">
-        <div class="tile" id="0"></div>
-        <div class="tile" id="1"></div>
-        <div class="tile" id="2"></div>
-        <div class="tile" id="3"></div>
-        <div class="tile" id="4"></div>
-        <div class="tile" id="5"></div>
-        <div class="tile" id="6"></div>
-        <div class="tile" id="7"></div>
-        <div class="tile" id="8"></div>
+    <h1>Jogo da Velha</h1>
+    <div id="options">
+      <button id="2-players">2 Jogadores</button>
+      <button id="ai-player">Contra IA</button>
+    </div>
+
+    <div class="hide" id="game-container">
+      <div class="tile" id="tile-1"></div>
+      <div class="tile" id="tile-2"></div>
+      <div class="tile" id="tile-3"></div>
+      <div class="tile" id="tile-4"></div>
+      <div class="tile" id="tile-5"></div>
+      <div class="tile" id="tile-6"></div>
+      <div class="tile" id="tile-7"></div>
+      <div class="tile" id="tile-8"></div>
+      <div class="tile" id="tile-9"></div>
+
+      <div id="scoreboard-container">
+        <h2>Placar:</h2>
+        <span class="score-box">
+          <span id="x-scoreboard">X</span>:
+          <span id="scoreboard-1">0</span>
+        </span>
+        <span class="score-box">
+          <span id="o-scoreboard"></span>:
+          <span id="scoreboard-2">0</span>
+        </span>
       </div>
     </div>
+
+    <div class="hide">
+      <div class="x">X</div>
+      <div class="o"></div>
+    </div>
+
+    <div class="hide" id="result-screen-filter"></div>
+    <div class="hide" id="result-container">
+      <h2></h2>
+      <button>Novo jogo</button>
+    </div>
+
     <script src="js/scripts.js"></script>
   </body>
 </html>

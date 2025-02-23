@@ -3,44 +3,184 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Sniglet", serif;
+    font-family: "Sniglet";
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     background-color: #213040;
 }
 
 h1 {
     color: whitesmoke;
+    position: relative;
+    font-size: 42px;
+    margin: 50px 0px 0px 0px;
+}
+
+.hide {
+    display: none !important;
+}
+
+/* Botões Menu */
+
+#options {
     text-align: center;
-    font-size: 40px;
-    margin: 5px;
+    padding-top: 10px;
 }
 
-.game {
+#options button {
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    background-color: whitesmoke;
+    margin: 10px;
+    border-radius: 3px;
+    border: none;
+}
+
+#options button:hover {
+    background-color: #ddd;
+}
+
+/* Jogo */
+
+#game-container {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    width: 300px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .tile {
-    width: 100px;
     height: 100px;
+    box-sizing: border-box;
+    flex: 1 1 33%;
     font-size: 50px;
     text-align: center;
-    padding-top: 20%;
-    margin: 5px;
-    border-radius: 3px;
-    background: whitesmoke;
+    border: 5px solid #000;
+    background: #213040;
     cursor: pointer;
+}
+
+#tile-1, #tile-2, #tile-3 {
+    border-top: none;
+}
+
+#tile-3, #tile-6, #tile-9 {
+    border-right: none;
+}
+
+#tile-7, #tile-8, #tile-9{
+    border-bottom: none;
+}
+
+#tile-1, #tile-4, #tile-7 {
+    border-left: none;
+}
+
+/* X e O*/
+
+.x {
+    font-size: 65px;
+    color: red;
+    display: inline-block;
+    line-height: 100px;
+}
+
+.o {
+    width: 50px;
+    height: 50px;
+    border: 5px solid green;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 17px;
+}
+
+/* Scoreboard */
+
+#scoreboard-container {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 50px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.score-box {
+    margin: 0 20px;
+}
+
+#x-scoreboard {
+    color: red;
+    margin-right: 5px;
+    font-weight: lighter;
+}
+
+#o-scoreboard {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid green;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* Tela de Resultados */
+
+#result-container {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    top: 250px;
+    display: grid;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 10px;
+}
+
+#result-container h2 {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+#result-container button {
+    color: whitesmoke;
+    width: 100px;
+    height: 40px;
+    background-color: red;
+    border-radius: 10px;
+    border-style: none;
+    position: relative;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#result-container button:hover {
+    background-color: rgb(102, 2, 2);
+}
+
+#result-screen-filter {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 80%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
