@@ -11,7 +11,7 @@
 ![tela-de-resultados](https://github.com/user-attachments/assets/5c036c42-f462-4015-bc16-03da80061eae)
 
 # Tecnologias utilizadas:
-HTML ,CSS, JavaScript
+HTML, CSS, JavaScript
 
 # Como executar o projeto:
 1- Clone o repositório do GitHub:
